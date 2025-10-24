@@ -4,87 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carbudget.ia – Control inteligente de gastos del coche</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/feather-icons"></script>
-  <style>
-    /* Animaciones simples */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Hero -->
-<header class="bg-gradient-to-r from-[#5e4d83] to-[#7b69a3] text-white py-24">
-    <div class="container mx-auto text-center px-4">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade">Carbudget.ia</h1>
-      <p class="text-lg md:text-2xl mb-8 animate-fade">Controla todos los gastos de tu vehículo con inteligencia artificial</p>
-      <a href="https://play.google.com/store/apps/details?id=com.tuempresa.carbudget" target="_blank" class="bg-white text-[#5e4d83] font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition transform duration-300 inline-block">Descargar en Google Play</a>
-    </div>
-</header>
+  <header class="bg-gradient-to-r from-[#5e4d83] to-[#7b69a3] text-white py-24 text-center">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 fade-in">Carbudget.ia</h1>
+    <p class="text-lg md:text-2xl mb-8 fade-in">Controla todos los gastos de tu vehículo con inteligencia artificial</p>
+    <a href="https://play.google.com/store/apps/details?id=com.tuempresa.carbudget" target="_blank" class="btn-primary">Descargar en Google Play</a>
+  </header>
 
-
-  <!-- Funciones Destacadas -->
+  <!-- Funciones con mockups -->
   <section class="py-24">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-16">Funciones Destacadas</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
-          <div class="text-blue-500 mb-4 text-4xl text-center">
-            <i data-feather="camera"></i>
-          </div>
-          <h3 class="font-semibold text-xl mb-2 text-center">Escaneo automático</h3>
-          <p class="text-gray-700 text-center">Registra tus tickets y facturas con una simple foto y nuestra IA hará el resto.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
-          <div class="text-green-500 mb-4 text-4xl text-center">
-            <i data-feather="folder"></i>
-          </div>
-          <h3 class="font-semibold text-xl mb-2 text-center">Clasificación inteligente</h3>
-          <p class="text-gray-700 text-center">Organiza automáticamente tus gastos: combustible, mantenimiento, seguros y más.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
-          <div class="text-yellow-500 mb-4 text-4xl text-center">
-            <i data-feather="bar-chart-2"></i>
-          </div>
-          <h3 class="font-semibold text-xl mb-2 text-center">Estadísticas y reportes</h3>
-          <p class="text-gray-700 text-center">Visualiza gráficos claros y análisis detallados de tus gastos mensuales o anuales.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
-          <div class="text-red-500 mb-4 text-4xl text-center">
-            <i data-feather="layers"></i>
-          </div>
-          <h3 class="font-semibold text-xl mb-2 text-center">Multi-vehículo</h3>
-          <p class="text-gray-700 text-center">Administra varios coches o motos desde un solo lugar de forma sencilla.</p>
+
+      <div class="flex flex-col lg:flex-row items-center mb-16 fade-in">
+        <img src="images/mockup1.png" alt="Escaneo automático" class="mockup mb-6 lg:mb-0 lg:mr-12 w-64">
+        <div>
+          <h3 class="font-semibold text-2xl mb-4">Escaneo automático</h3>
+          <p class="text-gray-700 mb-2">Registra tus tickets y facturas con una simple foto y nuestra IA hará el resto.</p>
         </div>
       </div>
+
+      <div class="flex flex-col lg:flex-row-reverse items-center mb-16 fade-in">
+        <img src="images/mockup2.png" alt="Clasificación inteligente" class="mockup mb-6 lg:mb-0 lg:ml-12 w-64">
+        <div>
+          <h3 class="font-semibold text-2xl mb-4">Clasificación inteligente</h3>
+          <p class="text-gray-700 mb-2">Organiza automáticamente tus gastos: combustible, mantenimiento, seguros y más.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center mb-16 fade-in">
+        <img src="images/mockup3.png" alt="Estadísticas y reportes" class="mockup mb-6 lg:mb-0 lg:mr-12 w-64">
+        <div>
+          <h3 class="font-semibold text-2xl mb-4">Estadísticas y reportes</h3>
+          <p class="text-gray-700 mb-2">Visualiza gráficos claros y análisis detallados de tus gastos mensuales o anuales.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row-reverse items-center fade-in">
+        <img src="images/mockup4.png" alt="Multi-vehículo" class="mockup mb-6 lg:mb-0 lg:ml-12 w-64">
+        <div>
+          <h3 class="font-semibold text-2xl mb-4">Multi-vehículo</h3>
+          <p class="text-gray-700 mb-2">Administra varios coches o motos desde un solo lugar de forma sencilla.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Políticas de Privacidad -->
-  <section class="bg-gray-100 py-16">
+  <section id="privacy-policy" class="bg-gray-100 py-16">
     <div class="container mx-auto px-4 max-w-3xl">
       <h2 class="text-2xl font-bold mb-4">Políticas de Privacidad</h2>
-      <p class="text-gray-700 mb-2">
-        En Carbudget.ia nos tomamos muy en serio la privacidad de nuestros usuarios. Toda la información recopilada se utiliza únicamente para registrar y gestionar los gastos de tus vehículos y se almacena de forma segura en la nube.
+      <p class="text-gray-700 mb-4">
+        En <strong>Carbudget.ia</strong> respetamos tu privacidad y queremos que tengas total transparencia sobre cómo se gestionan tus datos.
       </p>
-      <p class="text-gray-700">
-        No compartimos tus datos con terceros sin tu consentimiento explícito. Puedes consultar nuestra política completa en el enlace proporcionado dentro de la app.
+      <p class="text-gray-700 mb-4">
+        <strong>1. Recopilación de datos:</strong> Actualmente, Carbudget.ia <strong>no recopila información personal de los usuarios</strong>. Todos los datos que introduces en la aplicación se almacenan <strong>localmente en tu dispositivo</strong>.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>2. Uso de la información:</strong> Toda la información que registres, como gastos, tickets o facturas, se utiliza exclusivamente para mostrarte tus estadísticas y ayudarte a controlar los gastos de tus vehículos.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>3. Seguridad:</strong> Aunque los datos se almacenan localmente, te recomendamos mantener tu dispositivo protegido. Carbudget.ia no transmite información a servidores externos ni a terceros.
+      </p>
+      <p class="text-gray-700 mb-4">
+        <strong>4. Cambios en la política:</strong> Nos reservamos el derecho de actualizar estas políticas en el futuro. En caso de que la aplicación empiece a recopilar datos personales, notificaremos a los usuarios y se actualizará la política.
       </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
+  <footer class="bg-[#5e4d83] text-white py-8">
     <div class="container mx-auto px-4 text-center">
       <p>© 2025 Carbudget.ia – Todos los derechos reservados.</p>
+      <a href="#privacy-policy" class="footer-link mt-2 inline-block">Ver Políticas de Privacidad</a>
     </div>
   </footer>
 
@@ -103,7 +102,6 @@
         }
       });
     }, appearOptions);
-
     faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
