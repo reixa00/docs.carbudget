@@ -4,21 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carbudget.ia – Control inteligente de gastos del coche</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    /* Animaciones simples */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <h1>🚗 Carbudget.ia</h1>
-    <p>Controla los gastos de tu vehículo con inteligencia artificial</p>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero -->
+  <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-24">
+    <div class="container mx-auto text-center px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade">Carbudget.ia</h1>
+      <p class="text-lg md:text-2xl mb-8 animate-fade">Controla todos los gastos de tu vehículo con inteligencia artificial</p>
+      <a href="https://play.google.com/store/apps/details?id=com.tuempresa.carbudget" target="_blank" class="bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition transform duration-300 inline-block">Descargar en Google Play</a>
+    </div>
   </header>
 
-  <section>
-    <p>Carbudget.ia te ayuda a registrar y analizar automáticamente todos los gastos de tu coche: gasolina, mantenimiento, seguros, peajes y más. Solo tienes que hacer una foto del ticket y nuestra IA hará el resto.</p>
-    <a href="https://play.google.com/store/apps/details?id=com.tuempresa.carbudget" target="_blank">Descargar en Google Play</a>
+  <!-- Funciones Destacadas -->
+  <section class="py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-16">Funciones Destacadas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
+          <div class="text-blue-500 mb-4 text-4xl text-center">
+            <i data-feather="camera"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Escaneo automático</h3>
+          <p class="text-gray-700 text-center">Registra tus tickets y facturas con una simple foto y nuestra IA hará el resto.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
+          <div class="text-green-500 mb-4 text-4xl text-center">
+            <i data-feather="folder"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Clasificación inteligente</h3>
+          <p class="text-gray-700 text-center">Organiza automáticamente tus gastos: combustible, mantenimiento, seguros y más.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
+          <div class="text-yellow-500 mb-4 text-4xl text-center">
+            <i data-feather="bar-chart-2"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Estadísticas y reportes</h3>
+          <p class="text-gray-700 text-center">Visualiza gráficos claros y análisis detallados de tus gastos mensuales o anuales.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 fade-in">
+          <div class="text-red-500 mb-4 text-4xl text-center">
+            <i data-feather="layers"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 text-center">Multi-vehículo</h3>
+          <p class="text-gray-700 text-center">Administra varios coches o motos desde un solo lugar de forma sencilla.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Carbudget.ia – Todos los derechos reservados.</p>
+  <!-- Políticas de Privacidad -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-2xl font-bold mb-4">Políticas de Privacidad</h2>
+      <p class="text-gray-700 mb-2">
+        En Carbudget.ia nos tomamos muy en serio la privacidad de nuestros usuarios. Toda la información recopilada se utiliza únicamente para registrar y gestionar los gastos de tus vehículos y se almacena de forma segura en la nube.
+      </p>
+      <p class="text-gray-700">
+        No compartimos tus datos con terceros sin tu consentimiento explícito. Puedes consultar nuestra política completa en el enlace proporcionado dentro de la app.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Carbudget.ia – Todos los derechos reservados.</p>
+    </div>
   </footer>
+
+  <script>
+    // Activar iconos feather
+    feather.replace();
+
+    // Animación fade-in al hacer scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
